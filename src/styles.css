@@ -1,7 +1,8 @@
 :root {
-  --main-color: #35b3f2;
+  --main-color: #007bff;
   --sub-color: #7d7f80;
-  --btn-primary-color: #35b3f2;
+  --btn-primary-color: #007bff;
+  --heading-color: #0a68cc;
 }
 
 .App {
@@ -22,6 +23,7 @@
   font-size: 16px;
   padding: 1%;
 }
+/* Buttons */
 .btn-primary {
   background-color: var(--btn-primary-color);
   color: #eee;
@@ -31,12 +33,22 @@
   margin-top: 20px;
   width: 20%;
   cursor: pointer;
+  border: none;
 }
 .btn-primary.create-rooms {
   width: 300px;
   height: 25%;
   box-shadow: 2px 3px 20px var(--sub-color);
 }
+.btn-primary.add-rooms {
+  box-shadow: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 16px;
+  margin-top: auto;
+}
+
+/* containers */
 .create-rooms-container {
   border: 1px black;
   max-width: 60%;
@@ -49,9 +61,25 @@
   display: flex;
   flex-flow: column wrap;
 }
-
+.dashboard-head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+/* messages */
 .create-rooms-message {
   padding-top: 10%;
   font: "Noto-Sans";
   color: var(--main-color);
+}
+.title-main.rooms-heading {
+  color: var(--heading-color);
+}
+.head-divider {
+  color: var(--sub-color);
+  opacity: 0.2;
 }
