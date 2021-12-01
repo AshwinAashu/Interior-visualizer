@@ -1,4 +1,33 @@
+:root {
+  --main-color: #35b3f2;
+  --sub-color: #7d7f80;
+  --btn-primary-color: #35b3f2;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+.welcome-main {
+  margin-top: 50%;
+}
+.title-main {
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-family: "Noto-Sans";
+}
+.title-sub {
+  color: var(--sub-color);
+  font-size: 16px;
+  padding: 1%;
+}
+.btn-primary {
+  background-color: var(--btn-primary-color);
+  color: #eee;
+  border-radius: 50px;
+  box-shadow: 2px 7px 25px var(--sub-color);
+  padding: 5px;
+  margin-top: 20px;
+  width: 20%;
 }
