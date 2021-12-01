@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
 const CreateRooms = () => {
+  let navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate("/dashboard");
+  };
   return (
     <div className="create-rooms-main">
       <div className="create-rooms-container">
@@ -13,7 +18,9 @@ const CreateRooms = () => {
             Create a new room
           </button>
           <br />
-          <button className="btn-primary create-rooms">Go to your rooms</button>
+          <button className="btn-primary create-rooms" onClick={handleRedirect}>
+            Go to your rooms
+          </button>
         </div>
       </div>
     </div>
