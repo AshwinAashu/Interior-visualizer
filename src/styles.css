@@ -35,11 +35,12 @@
 .btn-primary.create-rooms {
   width: 300px;
   height: 25%;
+  box-shadow: 2px 3px 20px var(--sub-color);
 }
 .create-rooms-container {
   border: 1px black;
   max-width: 60%;
-  height: 40vh;
+  min-height: 45vh;
   box-shadow: 10px 10px 50px var(--sub-color);
   border-radius: 10px;
   margin-top: 15%;

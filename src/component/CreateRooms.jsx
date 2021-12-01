@@ -8,9 +8,11 @@ const CreateRooms = () => {
           <span className="title-sub">
             Create a room or explore your saved rooms
           </span>
+          <br />
           <button className="btn-primary create-rooms">
             Create a new room
           </button>
+          <br />
           <button className="btn-primary create-rooms">Go to your rooms</button>
         </div>
       </div>
