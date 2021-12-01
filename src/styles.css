@@ -38,13 +38,12 @@
 }
 .create-rooms-container {
   border: 1px black;
-  width: 70%;
+  max-width: 60%;
   height: 40vh;
   box-shadow: 10px 10px 50px var(--sub-color);
   border-radius: 10px;
   margin-top: 15%;
-  margin-left: 15%;
-  position: fixed;
+  margin-left: 20%;
   overflow: hidden;
   display: flex;
   flex-flow: column wrap;
