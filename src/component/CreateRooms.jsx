@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AddRoomModal from "./AddRoomModal";
-const CreateRooms = () => {
+const CreateRooms = ({ setRoomName }) => {
   //Room Modal
   const [showModal, setShowModal] = useState();
   const handleModal = () => {
@@ -25,7 +25,7 @@ const CreateRooms = () => {
           <br />
           <button className="btn-primary create-rooms" onClick={handleModal}>
             Create a new room
-            <AddRoomModal showModal={showModal} />
+            <AddRoomModal showModal={showModal} setRoomName={setRoomName} />
           </button>
           <br />
           <button className="btn-primary create-rooms" onClick={handleRedirect}>

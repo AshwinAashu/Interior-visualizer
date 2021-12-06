@@ -12,7 +12,10 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomeScreen />} />
-            <Route path="/createRooms" element={<CreateRooms />} />
+            <Route
+              path="/createRooms"
+              element={<CreateRooms setRoomName={setRoomName} />}
+            />
             <Route path="/dashboard" element={<RoomsDashboard />} />
           </Routes>
         </BrowserRouter>

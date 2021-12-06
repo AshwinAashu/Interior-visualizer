@@ -1,14 +1,18 @@
 import { useNavigate } from "react-router-dom";
-const AddRoomModal = ({ setRoomName, showModal }) => {
+const AddRoomModal = ({ showModal, setRoomName }) => {
   let name;
   //Show modal False
   let navigate = useNavigate();
   if (!showModal) {
     return null;
   }
+  const handleName = (e) => {
+    name = e.target.value;
+  };
   //set roomName
-  const handleRoomName = (e) => {
-    name = e.target.value();
+  const handleRoomName = () => {
+    setRoomName(name);
+    navigate("/dashboard");
   };
   return (
     <div className="new-room-modal">
@@ -18,14 +22,12 @@ const AddRoomModal = ({ setRoomName, showModal }) => {
           <span>drop image here</span>
         </div>
         <div className="modal-footer">
-          <input placeholder="Name your room" value={handleRoomName} />
-          <button
-            className="btn-primary"
-            onSubmit={() => {
-              setRoomName(name);
-              navigate("/dashboard");
-            }}
-          >
+          <input
+            placeholder="Name your room"
+            value={name}
+            onChange={handleName}
+          />
+          <button className="btn-primary" onClick={handleRoomName} required>
             Save Room
           </button>
         </div>
